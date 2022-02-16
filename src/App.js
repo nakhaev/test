@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App" style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
-        {data && data.map(item => <Item { ...item}/>)}
+        {data && data.map(item => <Item key={item.label} { ...item}/>)}
     </div>
   );
 }
