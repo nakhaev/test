@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Item from './item';
 
 function App() {
+  const data = [
+    {
+      name: 'FIRST',
+      label: 'FRT'
+    },
+    {
+      name: 'SECOND',
+      label: 'SED'
+    },
+    {
+      name: 'THIRD',
+      label: 'THD'
+    }
+  ]
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+        {data && data.map(item => <Item { ...item}/>)}
     </div>
   );
 }
